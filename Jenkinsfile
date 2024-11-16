@@ -11,7 +11,9 @@ pipeline {
         stage('拉取代码'){
             // 步骤
             steps{
-                sh 'go version'
+                sh '''
+                go version
+                '''
             }
         }
 
