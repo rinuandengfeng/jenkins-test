@@ -13,7 +13,10 @@ pipeline {
 
         stage('构建'){
             steps{
-                make
+                sh """
+                    make mod
+                    make build
+                   """
             }
 
         }
