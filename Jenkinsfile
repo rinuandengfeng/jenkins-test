@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     // 配置go的版本
-    tools{
-        go 'go1.21.0'
-    }
+//     tools{
+//         go 'go1.21.0'
+//     }
     // 阶段
     stages{
         // 阶段
