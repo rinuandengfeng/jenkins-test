@@ -1,6 +1,11 @@
 
+.PHONY:all
+all: mod build
+
+.PHONY:mod
 mod:
-	export PATH=$PATH:/usr/local/go/bin
 	go mod tidy
+
+.PHONY:build
 build:
 	CGO_ENABLE=1 GOARCH=amd64 GOOS=linux go build -a -o .
