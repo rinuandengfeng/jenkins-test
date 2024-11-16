@@ -7,13 +7,13 @@ pipeline {
         stage('拉取代码'){
             // 步骤
             steps{
-                sh git 'git@github.com:rinuandengfeng/jenkins-test.git'
+                git 'git@github.com:rinuandengfeng/jenkins-test.git'
             }
         }
 
         stage('构建'){
             steps{
-                sh make
+                make
             }
 
         }
