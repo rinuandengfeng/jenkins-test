@@ -8,4 +8,8 @@ mod:
 
 .PHONY:build
 build:
-	CGO_ENABLE=1 GOARCH=amd64 GOOS=linux go build -a -o .
+	CGO_ENABLE=1 GOARCH=amd64 GOOS=linux go build -a . -o app
+
+clean:
+	rm -f app
+
