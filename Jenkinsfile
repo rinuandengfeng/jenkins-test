@@ -20,10 +20,11 @@ pipeline {
 
         stage('构建'){
             steps{
-                sh """
-                    make mod
-                    make build
-                   """
+                sh '''
+                    export PATH=$PATH:/usr/local/go/bin
+                   '''
+                 make
+
             }
 
         }
