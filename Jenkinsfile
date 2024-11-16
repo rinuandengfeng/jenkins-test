@@ -3,7 +3,7 @@ pipeline {
 
     // 配置go的版本
     tools{
-        go '1.21.0'
+        go '1.21'
     }
     // 阶段
     stages{
