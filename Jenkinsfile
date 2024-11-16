@@ -12,6 +12,7 @@ pipeline {
             // 步骤
             steps{
                 sh '''
+                export PATH=$PATH:/usr/local/go/bin
                 go version
                 '''
             }
