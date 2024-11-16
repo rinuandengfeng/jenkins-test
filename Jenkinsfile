@@ -22,8 +22,10 @@ pipeline {
             steps{
                 sh '''
                     export PATH=$PATH:/usr/local/go/bin
+                    go version
+                    make
                    '''
-                 make
+
 
             }
 
