@@ -4,7 +4,7 @@ pipeline {
     // 阶段
     stages{
         // 阶段
-        steps('拉取代码'){
+        stage('拉取代码'){
             // 步骤
             steps{
                 sh git 'git@github.com:rinuandengfeng/jenkins-test.git'
