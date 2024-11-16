@@ -5,6 +5,11 @@ pipeline {
 //     tools{
 //         go 'go1.21.0'
 //     }
+
+    // 配置go的环境变量
+    environment{
+        GOPROXY=https://goproxy.cn,direct
+    }
     // 阶段
     stages{
         // 阶段
@@ -25,8 +30,6 @@ pipeline {
                     go version
                     make
                    '''
-
-
             }
 
         }
