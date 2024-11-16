@@ -9,6 +9,7 @@ pipeline {
     // 配置go的环境变量
     environment{
         GOPROXY= 'https://goproxy.cn,direct'
+        PATH=$PATH:/usr/local/go/bin
     }
     // 阶段
     stages{
@@ -17,7 +18,6 @@ pipeline {
             // 步骤
             steps{
                 sh '''
-                export PATH=$PATH:/usr/local/go/bin
                 go version
                 '''
             }
@@ -26,8 +26,6 @@ pipeline {
         stage('构建'){
             steps{
                 sh '''
-                    export PATH=$PATH:/usr/local/go/bin
-                    go version
                     make
                    '''
             }
