@@ -8,7 +8,7 @@ pipeline {
 
     // 配置go的环境变量
     environment{
-        GOPROXY=https://goproxy.cn,direct
+        GOPROXY= 'https://goproxy.cn,direct'
     }
     // 阶段
     stages{
