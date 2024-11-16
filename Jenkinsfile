@@ -8,6 +8,7 @@ pipeline {
             // 步骤
             steps{
                 git 'git@github.com:rinuandengfeng/jenkins-test.git'
+                sh 'go version'
             }
         }
 
