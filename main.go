@@ -16,5 +16,11 @@ func main() {
 		ctx.JSON(http.StatusOK, res)
 	})
 
+	r.GET("/test", func(ctx *gin.Context) {
+		res := map[string]string{}
+		res["data"] = "test"
+		ctx.JSON(http.StatusOK, res)
+	})
+
 	r.Run(":8080")
 }
